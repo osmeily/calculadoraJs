@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Code+Pro:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    background-color: rgb(40, 28, 62);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dis dis dis dis"
+    "ac c div times"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equals"
+    "zero zero dot equals"
+    ;
+    background-color: rgb(7, 7, 28);
+    padding: 20px;
+    gap: 10px;
+}
+
+.padButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 40px;
+    background-color: rgb(39, 36, 75);
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.padButton:hover{
+    background-color: rgba(39, 36, 75, 0.5);
+    border: rgb(201, 201, 201) 1px solid;
+}
+
+.padButton:active{
+    background-color: rgb(55, 51, 96)
+}
+
+.dis{
+    grid-area: dis;
+    background-color: rgb(96, 109, 108);
+    border-radius: 5px;
+    text-align: right;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.equals{
+    grid-area: equals;
+    background-color: rgb(87, 87, 87);
+}
+
+.ac, .c{
+    background-color: rgb(128, 19, 19);
+}
+
+.dis input{
+    background-color: rgb(96, 109, 108);
+    border: none;
+    font-weight: 600;
+    text-align: right;
+}
